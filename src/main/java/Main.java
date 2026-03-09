@@ -14,10 +14,10 @@ public class Main {
 
         Comparator personComparator = new PersonComparator();
 
-        Collections.sort(persons, personComparator );
+        Collections.sort(persons, personComparator);
         System.out.println(persons);
 
-        Collections.sort(persons, (x, y) -> ((Person)y).getAge()-((Person)x).getAge());
+        Collections.sort(persons, (x, y) -> y.getName().compareTo(x.getName()));
         System.out.println(persons);
     }
 }
